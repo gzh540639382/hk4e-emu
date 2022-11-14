@@ -8,6 +8,13 @@ import (
 	"github.com/teyvat-helper/hk4e-emu/pkg/sdk"
 )
 
+func (s *Server) handleSDKGetAlertPic(c *gin.Context) {
+	c.JSON(http.StatusOK, sdk.NewResponse(0, gin.H{
+		"total": 0,
+		"list": []gin.H{},
+	}))
+}
+
 func (s *Server) handleSDKGetAgreementInfos(c *gin.Context) {
 	c.JSON(http.StatusOK, sdk.NewResponse(0, gin.H{
 		"marketing_agreements": []gin.H{},
